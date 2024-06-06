@@ -48,6 +48,7 @@ module.exports = {
     "@typescript-eslint/restrict-plus-operands": "off", // Deshabilitar la regla problemática
     "react/jsx-indent": [2, 2],
     "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
     "jsx-quotes": [2, "prefer-double"],
     "react/no-unescaped-entities": "off",
     "import/order": ["error", { "newlines-between": "always" }],
