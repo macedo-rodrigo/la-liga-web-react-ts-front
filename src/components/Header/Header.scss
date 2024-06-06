@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between; /* Distribuir el espacio entre los elementos */
+  position: relative;
+}
+
+.header__links {
+  display: flex; /* Para alinear los links horizontalmente */
+  margin-left: auto; /* Empujar los enlaces a la derecha */
+}
+
+.header__link {
+  color: #303030;
+  text-align: center;
+  padding: 10px 20px; /* Corregir los separadores, usar espacio en vez de coma */
+  text-decoration: none;
+  margin-right: 10px; /* Espacio entre los enlaces */
+  border: solid 1px #303030;
+
+  &.active {
+    text-decoration: underline;
+  }
+}
+
+.header__link:last-child {
+  margin-right: 0; /* Eliminar margen derecho del último enlace */
+}

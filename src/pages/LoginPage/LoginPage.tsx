@@ -1,9 +1,12 @@
+import Header from "../../components/Header/Header";
 import "./LoginPage.scss";
 
 const LoginPage = (): JSX.Element => {
   return (
     <div className="login-page">
-      <h1>LOGIN</h1>
+      <Header></Header>
+      
+      <h1>SIGN IN</h1>
     </div>
   );
 };

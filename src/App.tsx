@@ -8,8 +8,6 @@ import RegisterPage from "./pages/RegisterPage/RegisterPage";
 const App = (): JSX.Element => {
   return (
     <div className="app">
-      <h1>HOME LA LIGA WEB</h1>
-
       <HashRouter>
         <Routes>
           <Route path="/" element={<HomePage></HomePage>}></Route>
