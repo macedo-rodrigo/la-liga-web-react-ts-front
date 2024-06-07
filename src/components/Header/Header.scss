@@ -4,6 +4,7 @@
   padding: 20px;
   justify-content: space-between; /* Distribuir el espacio entre los elementos */
   position: relative;
+  width: 100%;
 }
 
 .header__links {
@@ -26,4 +27,20 @@
 
 .header__link:last-child {
   margin-right: 0; /* Eliminar margen derecho del último enlace */
+}
+
+.header__user-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+}
+
+.header__name {
+  margin-right: 10px;
+}
+
+.header__logout {
+  text-decoration: underline;
+  cursor: pointer;
 }

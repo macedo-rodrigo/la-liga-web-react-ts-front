@@ -3,7 +3,7 @@ import "./RegisterPage.scss";
 
 const RegisterPage = (): JSX.Element => {
   return (
-    <div className="register-page">
+    <div className="register-page page">
       <Header></Header>
       
       <h1>SIGN UP</h1>

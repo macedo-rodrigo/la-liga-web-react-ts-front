@@ -3,7 +3,7 @@ import "./HomePage.scss";
 
 const HomePage = (): JSX.Element => {
   return (
-    <div className="home-page">
+    <div className="home-page page">
       <Header></Header>
 
       <h1>HOME</h1>
