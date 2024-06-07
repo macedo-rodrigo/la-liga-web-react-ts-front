@@ -6,6 +6,9 @@ import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import { UserResponse } from "./models/User";
+import PlayerPage from "./pages/PlayerPage/PlayerPage";
+import CaptainPage from "./pages/CaptainPage/CaptainPage";
+import AdminPage from "./pages/AdminPage/AdminPage";
 
 interface AuthContextInfo {
   userInfo?: UserResponse;
@@ -40,6 +43,9 @@ const App = (): JSX.Element => {
             <Route path="/" element={<HomePage></HomePage>}></Route>
             <Route path="/login" element={<LoginPage></LoginPage>}></Route>
             <Route path="/register" element={<RegisterPage />} />
+            <Route path="/player-page" element={<PlayerPage />} />
+            <Route path="/captain-page" element={<CaptainPage />} />
+            <Route path="/admin-page" element={<AdminPage />} />
           </Routes>
         </HashRouter>
       </div>

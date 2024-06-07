@@ -1,27 +1,30 @@
+/* General page styles */
 .login-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px;
-  background-color: #E7EFE4;
+  position: relative;
+  width: 100vw;
   height: 100vh;
+  background: #E7EFE4;
+  overflow: hidden; /* Prevent scrolling */
 
   &__container {
+    position: absolute;
     width: 475px;
     height: 550px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #FFFFFF;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
   &__form {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 100%; /* Asegura que el formulario ocupe todo el ancho del contenedor */
+    width: 100%; /* Ensure the form takes the full width of the container */
   }
 
   &__buttons {
@@ -40,7 +43,7 @@
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
-    width: 100%; /* Asegura que los botones ocupen todo el ancho del contenedor */
+    width: 100%; /* Ensure buttons take the full width of the container */
 
     &:first-child {
       background-color: #0F4314;
@@ -57,30 +60,25 @@
   }
 
   &__img {
-    padding-left: 70px;
+    display: block;
+    margin: 0 auto;
   }
 }
 
 form {
-  width: 100%; /* Asegura que el formulario ocupe todo el ancho del contenedor */
+  width: 100%; /* Ensure the form takes the full width of the container */
 
   label {
-    text-align: left; /* Alinea las etiquetas a la izquierda */
-    margin-bottom: 5px; /* Espacio entre la etiqueta y el input */
-    width: 100%; /* Asegura que las etiquetas ocupen todo el ancho */
+    text-align: left; /* Align labels to the left */
+    margin-bottom: 5px; /* Space between label and input */
+    width: 100%; /* Ensure labels take the full width */
   }
 
   input,
   select {
     margin-bottom: 20px;
-    padding: 10px; /* Ajusta el padding para una mejor apariencia */
-    width: 100%; /* Asegura que los inputs ocupen todo el ancho */
-    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
-
-img {
-  align-self: center;
-}
-
-

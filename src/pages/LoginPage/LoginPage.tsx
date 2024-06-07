@@ -2,13 +2,15 @@
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
-import { useContext, useRef, MouseEvent } from "react";
+import { useContext, useRef, MouseEvent, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-import welcome from "../../assets/images/Bienvenido.png"
+import welcome from "../../assets/images/Bienvenido.png";
 import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 import "./LoginPage.scss";
 import { AuthContext } from "../../App";
+import { ROL } from "../../models/User";
 
 interface LoginInfo {
   email: string;
@@ -20,6 +22,18 @@ const LoginPage = (): JSX.Element => {
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (authInfo?.userInfo?.role) {
+      if (authInfo.userInfo.role === ROL.ADMIN) {
+        navigate("/admin-page");
+      } else if (authInfo.userInfo.role === ROL.PLAYER) {
+        navigate("/player-page");
+      } else if (authInfo.userInfo.role === ROL.CAPTAIN) {
+        navigate("/captain-page");
+      }
+    }
+  }, [authInfo, navigate]);
 
   const submitForm = (event: MouseEvent<HTMLButtonElement>): void => {
     event.preventDefault();
@@ -95,7 +109,7 @@ const LoginPage = (): JSX.Element => {
           />
           <div className="login-page__buttons">
             <button onClick={handleSignIn} className="login-page__button">
-              Sign in
+              Let's go!
             </button>
             <button onClick={handleJoinNow} className="login-page__button">
               New to La Liga? Join Now
@@ -103,9 +117,11 @@ const LoginPage = (): JSX.Element => {
           </div>
         </form>
       </div>
+      <Footer/>
     </div>
   );
 };
 
 export default LoginPage;
+
 

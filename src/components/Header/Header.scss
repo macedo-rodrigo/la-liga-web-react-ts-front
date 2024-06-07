@@ -1,46 +1,65 @@
 .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 20px;
-  justify-content: space-between; /* Distribuir el espacio entre los elementos */
-  position: relative;
+  background: #E7EFE4;
+  position: fixed; /* Change to fixed to stay at the top */
   width: 100%;
-}
+  height: 63px;
+  top: 0;
+  z-index: 1000; /* Ensure header stays on top */
 
-.header__links {
-  display: flex; /* Para alinear los links horizontalmente */
-  margin-left: auto; /* Empujar los enlaces a la derecha */
-}
+  &__logo {
+    width: 241.5px;
+    height: 24px;
+    margin-left: 25px;
+  }
 
-.header__link {
-  color: #303030;
-  text-align: center;
-  padding: 10px 20px; /* Corregir los separadores, usar espacio en vez de coma */
-  text-decoration: none;
-  margin-right: 10px; /* Espacio entre los enlaces */
-  border: solid 1px #303030;
+  &__user-info {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    position: absolute;
+    right: 25px;
+  }
 
-  &.active {
+  &__name {
+    margin-right: 10px;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+  }
+
+  &__logout {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-weight: 700;
+    color: #0F4314;
+    cursor: pointer;
     text-decoration: underline;
   }
-}
 
-.header__link:last-child {
-  margin-right: 0; /* Eliminar margen derecho del último enlace */
-}
+  &__links {
+    display: flex;
+    gap: 10px;
+    margin-right: 25px;
+  }
 
-.header__user-info {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 20px;
-}
+  &__link {
+    color: #303030;
+    text-align: center;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: solid 1px #303030;
 
-.header__name {
-  margin-right: 10px;
-}
+    &:last-child {
+      margin-right: 0;
+    }
 
-.header__logout {
-  text-decoration: underline;
-  cursor: pointer;
+    &.active {
+      text-decoration: underline;
+    }
+  }
 }

@@ -22,5 +22,5 @@ export interface UserResponse {
   firstName: string;
   lastName: string;
   role?: ROL;
-  team?: TeamResponse;
+  team?: string | TeamResponse;
 }
